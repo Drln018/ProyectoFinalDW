@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administradores</title>
+    <!-- Incluye Bootstrap 5.2 desde un CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <style>
+        .usuario-item {
+            background-color: transparent; /* Color de fondo transparente */
+            border: 2px solid #ccc; /* Borde con color */
+            border-radius: 10px; /* Bordes redondeados */
+            padding: 10px; /* Espaciado interno */
+            margin-bottom: 10px; /* Espaciado inferior entre usuarios */
+        }
+
+        .usuario-info {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="bg-dark text-white p-3">Listado de Administradores</h1>
+    <div id="usuarios-list" class="container mt-3">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre de Usuario</th>
+                    <th>Correo Electrónico</th>
+                    <th>Rol</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las filas se agregarán aquí dinámicamente -->
+            </tbody>
+        </table>
+    </div>
+    <h2 class="mt-4 text-center">Agregar Nuevo Usuario</h2>
+    <div class="container mt-3 d-flex justify-content-center">
+        <div class="col-md-6 col-lg-4 p-3 shadow-sm border rounded-3">
+            <form id="usuario-form">
+                <label for="username" class="form-label">Nombre de Usuario:</label>
+                <input type="text" class="form-control form-control-sm mb-3" placeholder="Nombre de Usuario" id="username">
+                <label for="email" class="form-label">Correo Electrónico:</label>
+                <input type="text" class="form-control form-control-sm mb-3" placeholder="ejemplo@correo.com" id="email" title="Ingrese su correo electrónico">
+                <label for="password" class="form-label">Contraseña:</label>
+                <input type="password" class="form-control form-control-sm mb-3" placeholder="********" id="password" title="Ingrese su contraseña">
+                <label for="role" class="form-label">Rol:</label>
+                <select class="form-select form-select-sm mb-3" id="role" title="Seleccione el rol del usuario">
+                    <option value="Usuario normal">Usuario normal</option>
+                    <option value="Administrador">Administrador</option>
+                </select>
+                <label for="date_of_birth" class="form-label">Fecha de Nacimiento:</label>
+                <input type="date" class="form-control form-control-sm mb-3" id="date-of-birth" title="Ingrese su fecha de nacimiento">
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary">Agregar Usuario</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"></script>
+    <script src="./script/administradores.js"></script>
+</body>
+</html>
